@@ -13,7 +13,6 @@ An AI-powered web application that uses **Deep Learning (CNN)** to detect plant 
 - 🔍 **Real-time Disease Detection** - Upload plant images for instant analysis
 - 🎯 **High Accuracy** - 81-84% accuracy across 38 plant disease classes
 - 💊 **Treatment Recommendations** - Get specific treatment and prevention advice
-- 🧪 **Fertilizer Suggestions** - Tailored fertilizer recommendations based on disease
 - 📊 **Prediction History** - Track all past predictions with timestamps
 - 📱 **Responsive Design** - Works seamlessly on desktop, tablet, and mobile
 - 🚀 **REST API** - Easy integration with mobile apps and other services
