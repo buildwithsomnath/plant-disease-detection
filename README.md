@@ -523,8 +523,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Somnath Das**
 
-- GitHub: [@dassomnath99](https://github.com/dassomnath99)
-- LinkedIn: [@dassomnath99](https://linkedin.com/in/dassomnath99)
+- GitHub: [@dassomnath99](https://github.com/buildwithsomnath)
 - Email: somnathdas4462@gmail.com
 
 ## 🙏 Acknowledgments
@@ -548,15 +547,6 @@ If you have any questions or need help, please:
 1. Check the [Issues](https://github.com/dassomnath99/Plant-Disease-Detection/issues) page
 2. Open a new issue with detailed description
 3. Contact via email
-
-
-## ⭐ Star History
-
-If you find this project helpful, please consider giving it a star!
-
-[![Star History Chart](https://api.star-history.com/svg?repos=dassomnath99/Plant-Disease-Detection&type=Date)](https://star-history.com/#dassomnath99/Plant-Disease-Detection&Date)
-
----
 
 <div align="center">
 
