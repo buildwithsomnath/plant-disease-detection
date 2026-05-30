@@ -174,15 +174,17 @@ http://127.0.0.1:8000/
 
 ## 📁 Project Structure
 ```
-Plant-Disease-Detection/
+plant_disease_detection/
 │
-├── plant_disease_detection/          # Django project settings
+├── backend/          # Django project settings
 │   ├── __init__.py
 │   ├── settings.py                   # Configuration
 │   ├── urls.py                       # Main URL routing
 │   └── wsgi.py                       # WSGI config
 │
-├── prediction/                       # Main application
+├── predictions/                      # Main application
+│   ├── migrations                    # Migration
+│   ├── templates                     # templates(HTML code)
 │   ├── models.py                     # Database models
 │   ├── views.py                      # API endpoints
 │   ├── urls.py                       # App routing
@@ -193,19 +195,11 @@ Plant-Disease-Detection/
 │   ├── plant_disease_model.h5        # Trained CNN model
 │   ├── class_names.json              # Training plots
 │
-├── templates/                        # HTML templates
-│   └── index.html                    # Main interface
-│
-├── static/                           # Static files (CSS, JS, images)
 │
 ├── media/                            # User uploaded images
 │   └── uploads/
 │
-├── data/                             # Training dataset
-│   └── plant_disease_data/
 │
-├── train_with_test.py               # Model training script
-├── test_model.py                    # Model testing script
 ├── requirements.txt                 # Python dependencies
 ├── manage.py                        # Django management
 └── README.md                        # This file
