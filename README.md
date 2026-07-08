@@ -119,20 +119,45 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-4. **Download or train the model**
+### 4. **Download or train the model**
+
+Before downloading the dataset, configure your Kaggle API token.
+
+1. Sign in to your Kaggle account.
+2. Go to **Account Settings**.
+3. Under **API**, copy your API Token (starts with `KGAT_...`).
+
+**Windows (PowerShell):**
+
+```powershell
+$env:KAGGLE_API_TOKEN="KGAT_your_actual_token_here"
+```
+
+To make it permanent:
+
+```powershell
+setx KAGGLE_API_TOKEN "KGAT_your_actual_token_here"
+```
+
+Close and reopen PowerShell after running `setx`.
+
+Now download the PlantVillage dataset:
 
 ```bash
-# Download PlantVillage dataset
 python download_data.py
-
-# Train the model
-python train_with_test.py
-
-# This will create:
-# - models/plant_disease_model.h5
-# - models/class_names.json
-# - models/training_history.png
 ```
+
+Train the model:
+
+```bash
+python train_with_test.py
+```
+
+This will create:
+
+- `models/plant_disease_model.h5`
+- `models/class_names.json`
+- `models/training_history.png`
 
 5. **Setup Django**
 ```bash
