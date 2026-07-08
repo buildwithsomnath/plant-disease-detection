@@ -121,15 +121,6 @@ pip install -r requirements.txt
 
 4. **Download or train the model**
 
-**Option A: Use pre-trained model** (if provided)
-```bash
-# Download model files to models/ directory
-# Ensure you have:
-# - models/plant_disease_model.h5
-# - models/class_names.json
-```
-
-**Option B: Train your own model**
 ```bash
 # Download PlantVillage dataset
 python download_data.py
