@@ -21,7 +21,7 @@ An AI-powered web application that uses **Deep Learning (CNN)** to detect plant 
 
 ## 🌾 Supported Plants & Diseases
 
-### 38 Disease Classes Across Multiple Crops:
+### 🌿 Supported Disease Classes (15 Classes)
 
 <details>
 <summary><strong>🍅 Tomato (10 classes)</strong></summary>
@@ -31,10 +31,10 @@ An AI-powered web application that uses **Deep Learning (CNN)** to detect plant 
 - Late Blight
 - Leaf Mold
 - Septoria Leaf Spot
-- Spider Mites (Two-spotted spider mite)
+- Spider Mites (Two-spotted Spider Mite)
 - Target Spot
+- Tomato Yellow Leaf Curl Virus
 - Tomato Mosaic Virus
-- Yellow Leaf Curl Virus
 - Healthy
 
 </details>
@@ -49,26 +49,10 @@ An AI-powered web application that uses **Deep Learning (CNN)** to detect plant 
 </details>
 
 <details>
-<summary><strong>🌽 Corn (4 classes)</strong></summary>
-
-- Common Rust
-- Gray Leaf Spot
-- Northern Leaf Blight
-- Healthy
-
-</details>
-
-<details>
-<summary><strong>🌶️ Pepper (2 classes)</strong></summary>
+<summary><strong>🌶️ Bell Pepper (2 classes)</strong></summary>
 
 - Bacterial Spot
 - Healthy
-
-</details>
-
-<details>
-<summary><strong>🍎 Other Crops</strong></summary>
-Others Crops (19 classes)
 
 </details>
 
@@ -414,54 +398,7 @@ const uploadImage = async (imageUri) => {
 };
 ```
 
-### Flutter Example
-```dart
-import 'package:http/http.dart' as http;
-
-Future<void> uploadImage(String imagePath) async {
-  var request = http.MultipartRequest(
-    'POST',
-    Uri.parse('http://your-server.com/api/predict/'),
-  );
-  
-  request.files.add(await http.MultipartFile.fromPath('image', imagePath));
-  var response = await request.send();
-  
-  // Handle response
-}
-```
-
 ## 🚀 Deployment
-
-### Heroku Deployment
-
-1. **Install Heroku CLI**
-
-2. **Login to Heroku**
-```bash
-heroku login
-```
-
-3. **Create Heroku app**
-```bash
-heroku create your-app-name
-```
-
-4. **Set environment variables**
-```bash
-heroku config:set SECRET_KEY=your-secret-key
-heroku config:set DEBUG=False
-```
-
-5. **Deploy**
-```bash
-git push heroku main
-```
-
-6. **Run migrations**
-```bash
-heroku run python manage.py migrate
-```
 
 ### Docker Deployment
 ```bash
@@ -551,7 +488,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Somnath Das**
 
-- GitHub: [@dassomnath99](https://github.com/buildwithsomnath)
+- GitHub: [@buildwithsomnath](https://github.com/buildwithsomnath)
 - Email: somnathdas4462@gmail.com
 
 ## 🙏 Acknowledgments
@@ -559,7 +496,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Kaggle Community Dataset** - For providing the training data
 - **TensorFlow Team** - For the amazing deep learning framework
 - **Django Community** - For the robust web framework
-- **Contributors** - Thanks to all who have contributed!
 
 ## 📚 References
 
@@ -572,7 +508,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 If you have any questions or need help, please:
 
-1. Check the [Issues](https://github.com/dassomnath99/Plant-Disease-Detection/issues) page
+1. Check the [Issues](https://github.com/buildwithsomnath/plant-disease-detection/issues) page
 2. Open a new issue with detailed description
 3. Contact via email
 
