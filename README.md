@@ -121,6 +121,9 @@ pip install -r requirements.txt
 
 ### 4. **Download or train the model**
 
+```bash
+pip install kagglehub
+```
 Before downloading the dataset, configure your Kaggle API token.
 
 1. Sign in to your Kaggle account.
@@ -150,20 +153,28 @@ python download_data.py
 Train the model:
 
 ```bash
-python train_with_test.py
+python train_with_evaluate.py
 ```
 
+Test the model: (optional)
+
+```bash
+python test.py test_images/[filename].jpg
+```
 This will create:
 
 - `models/plant_disease_model.h5`
+- `models/plant_disease_model.tflite`
+- `models/plant_disease_model.keras`
 - `models/class_names.json`
 - `models/training_history.png`
+- `models/confusion_matrix.png`
+- `models/classification_report.txt`
 
 5. **Setup Django**
 ```bash
 # Create necessary directories
 mkdir -p media/uploads
-mkdir -p models
 
 # Run migrations
 python manage.py makemigrations
@@ -192,7 +203,7 @@ http://127.0.0.1:8000/
 ```
 plant_disease_detection/
 │
-├── backend/          # Django project settings
+├── backend/                          # Django project settings
 │   ├── __init__.py
 │   ├── settings.py                   # Configuration
 │   ├── urls.py                       # Main URL routing
@@ -209,7 +220,10 @@ plant_disease_detection/
 │
 ├── models/                           # ML models directory
 │   ├── plant_disease_model.h5        # Trained CNN model
-│   ├── class_names.json              # Training plots
+│   ├── plant_disease_model.keras     # .keras
+│   ├── plant_disease_model.h5        # .h5
+│   ├── plant_disease_model.tflite    # .tflite
+│   └── class_names.json              # Training plots
 │
 │
 ├── media/                            # User uploaded images
@@ -218,6 +232,9 @@ plant_disease_detection/
 │
 ├── requirements.txt                 # Python dependencies
 ├── manage.py                        # Django management
+├── train_with_evaluate.py           # Train and Test for Model Generation
+├── test.py                          # Predict and Test
+├── download_data.py                 # Download Dataset or change the path for different dataset
 └── README.md                        # This file
 ```
 
@@ -307,7 +324,7 @@ unzip plantdisease.zip -d data/
 2. **Train the model**
 ```bash
 # Simple training (recommended)
-python train_with_test.py
+python train_with_evaluate.py
 
 # Advanced training with detailed metrics
 python train_model.py
