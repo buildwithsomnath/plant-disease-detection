@@ -4,7 +4,7 @@ import os
 
 print("Downloading PlantVillage dataset...")
 
-path = kagglehub.dataset_download("emmarex/plantdisease") #or paste your kaggle dataset location
+path = kagglehub.dataset_download("vipoooool/new-plant-diseases-dataset") #or paste your kaggle dataset location
 
 print(f"Downloaded to: {path}")
 
