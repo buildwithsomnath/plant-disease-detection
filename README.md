@@ -21,7 +21,7 @@ An AI-powered web application that uses **Deep Learning (CNN)** to detect plant 
 
 ## 🌾 Supported Plants & Diseases
 
-### 🌿 Supported Disease Classes (15 Classes)
+### 🌿 Supported Disease Classes (38 Classes)
 
 <details>
 <summary><strong>🍎 Apple (4 classes)</strong></summary>
@@ -159,13 +159,17 @@ An AI-powered web application that uses **Deep Learning (CNN)** to detect plant 
 
 ## 🚀 Quick Start
 
-### Prerequisites
+## 📋 Prerequisites
 
-- Python 3.8 or higher
-- pip package manager
-- Virtual environment (recommended)
-- 4GB+ RAM
-- 2GB+ disk space
+Before running this project, ensure you have the following installed:
+
+- Python 3.10 or higher (3.11 recommended)
+- pip (Python package manager)
+- Git
+- Virtual environment (`venv`) (recommended)
+- 4 GB+ RAM (8 GB recommended for model training)
+- 5 GB+ free disk space (dataset, models, and dependencies)
+- Internet connection (required for downloading the PlantVillage dataset)
 
 ### Installation
 
@@ -255,9 +259,6 @@ python manage.py migrate
 
 # Create superuser (optional)
 python manage.py createsuperuser
-
-# Collect static files
-python manage.py collectstatic --noinput
 ```
 
 6. **Run the development server**
