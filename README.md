@@ -24,17 +24,69 @@ An AI-powered web application that uses **Deep Learning (CNN)** to detect plant 
 ### 🌿 Supported Disease Classes (15 Classes)
 
 <details>
-<summary><strong>🍅 Tomato (10 classes)</strong></summary>
+<summary><strong>🍎 Apple (4 classes)</strong></summary>
+
+- Apple Scab
+- Black Rot
+- Cedar Apple Rust
+- Healthy
+
+</details>
+
+<details>
+<summary><strong>🫐 Blueberry (1 class)</strong></summary>
+
+- Healthy
+
+</details>
+
+<details>
+<summary><strong>🍒 Cherry (2 classes)</strong></summary>
+
+- Powdery Mildew
+- Healthy
+
+</details>
+
+<details>
+<summary><strong>🌽 Corn (Maize) (4 classes)</strong></summary>
+
+- Cercospora Leaf Spot (Gray Leaf Spot)
+- Common Rust
+- Northern Leaf Blight
+- Healthy
+
+</details>
+
+<details>
+<summary><strong>🍇 Grape (4 classes)</strong></summary>
+
+- Black Rot
+- Esca (Black Measles)
+- Leaf Blight (Isariopsis Leaf Spot)
+- Healthy
+
+</details>
+
+<details>
+<summary><strong>🍊 Orange (1 class)</strong></summary>
+
+- Huanglongbing (Citrus Greening)
+
+</details>
+
+<details>
+<summary><strong>🍑 Peach (2 classes)</strong></summary>
 
 - Bacterial Spot
-- Early Blight
-- Late Blight
-- Leaf Mold
-- Septoria Leaf Spot
-- Spider Mites (Two-spotted Spider Mite)
-- Target Spot
-- Tomato Yellow Leaf Curl Virus
-- Tomato Mosaic Virus
+- Healthy
+
+</details>
+
+<details>
+<summary><strong>🌶️ Bell Pepper (2 classes)</strong></summary>
+
+- Bacterial Spot
 - Healthy
 
 </details>
@@ -49,9 +101,46 @@ An AI-powered web application that uses **Deep Learning (CNN)** to detect plant 
 </details>
 
 <details>
-<summary><strong>🌶️ Bell Pepper (2 classes)</strong></summary>
+<summary><strong>🍓 Raspberry (1 class)</strong></summary>
+
+- Healthy
+
+</details>
+
+<details>
+<summary><strong>🫘 Soybean (1 class)</strong></summary>
+
+- Healthy
+
+</details>
+
+<details>
+<summary><strong>🎃 Squash (1 class)</strong></summary>
+
+- Powdery Mildew
+
+</details>
+
+<details>
+<summary><strong>🍓 Strawberry (2 classes)</strong></summary>
+
+- Leaf Scorch
+- Healthy
+
+</details>
+
+<details>
+<summary><strong>🍅 Tomato (10 classes)</strong></summary>
 
 - Bacterial Spot
+- Early Blight
+- Late Blight
+- Leaf Mold
+- Septoria Leaf Spot
+- Spider Mites (Two-spotted Spider Mite)
+- Target Spot
+- Tomato Yellow Leaf Curl Virus
+- Tomato Mosaic Virus
 - Healthy
 
 </details>
