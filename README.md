@@ -1,611 +1,620 @@
-
 # 🌿 Plant Disease Detection System
-
-![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-2.15-orange.svg)
-![Django](https://img.shields.io/badge/Django-4.2+-green.svg)
-![License](https://img.shields.io/badge/License-MIT-yellow.svg)
-![Status](https://img.shields.io/badge/Status-Active-success.svg)
-
-An AI-powered web application that uses **Deep Learning (CNN)** to detect plant diseases from leaf images and provides tailored **fertilizer recommendations** and **treatment guidance** for farmers and agricultural professionals.
-
-## 🎯 Features
-
-- 🔍 **Real-time Disease Detection** - Upload plant images for instant analysis
-- 🎯 **High Accuracy** - 81-84% accuracy across 38 plant disease classes
-- 💊 **Treatment Recommendations** - Get specific treatment and prevention advice
-- 📊 **Prediction History** - Track all past predictions with timestamps
-- 📱 **Responsive Design** - Works seamlessly on desktop, tablet, and mobile
-- 🚀 **REST API** - Easy integration with mobile apps and other services
-- 🔐 **Secure** - CSRF protection, file validation, and input sanitization
-
-## 🌾 Supported Plants & Diseases
-
-### 🌿 Supported Disease Classes (38 Classes)
-
-<details>
-<summary><strong>🍎 Apple (4 classes)</strong></summary>
-
-- Apple Scab
-- Black Rot
-- Cedar Apple Rust
-- Healthy
-
-</details>
-
-<details>
-<summary><strong>🫐 Blueberry (1 class)</strong></summary>
-
-- Healthy
-
-</details>
-
-<details>
-<summary><strong>🍒 Cherry (2 classes)</strong></summary>
-
-- Powdery Mildew
-- Healthy
-
-</details>
-
-<details>
-<summary><strong>🌽 Corn (Maize) (4 classes)</strong></summary>
-
-- Cercospora Leaf Spot (Gray Leaf Spot)
-- Common Rust
-- Northern Leaf Blight
-- Healthy
-
-</details>
-
-<details>
-<summary><strong>🍇 Grape (4 classes)</strong></summary>
-
-- Black Rot
-- Esca (Black Measles)
-- Leaf Blight (Isariopsis Leaf Spot)
-- Healthy
-
-</details>
-
-<details>
-<summary><strong>🍊 Orange (1 class)</strong></summary>
-
-- Huanglongbing (Citrus Greening)
-
-</details>
-
-<details>
-<summary><strong>🍑 Peach (2 classes)</strong></summary>
-
-- Bacterial Spot
-- Healthy
-
-</details>
-
-<details>
-<summary><strong>🌶️ Bell Pepper (2 classes)</strong></summary>
-
-- Bacterial Spot
-- Healthy
-
-</details>
-
-<details>
-<summary><strong>🥔 Potato (3 classes)</strong></summary>
-
-- Early Blight
-- Late Blight
-- Healthy
-
-</details>
-
-<details>
-<summary><strong>🍓 Raspberry (1 class)</strong></summary>
-
-- Healthy
-
-</details>
-
-<details>
-<summary><strong>🫘 Soybean (1 class)</strong></summary>
-
-- Healthy
-
-</details>
-
-<details>
-<summary><strong>🎃 Squash (1 class)</strong></summary>
-
-- Powdery Mildew
-
-</details>
-
-<details>
-<summary><strong>🍓 Strawberry (2 classes)</strong></summary>
-
-- Leaf Scorch
-- Healthy
-
-</details>
-
-<details>
-<summary><strong>🍅 Tomato (10 classes)</strong></summary>
-
-- Bacterial Spot
-- Early Blight
-- Late Blight
-- Leaf Mold
-- Septoria Leaf Spot
-- Spider Mites (Two-spotted Spider Mite)
-- Target Spot
-- Tomato Yellow Leaf Curl Virus
-- Tomato Mosaic Virus
-- Healthy
-
-</details>
-
-## 📸 Screenshots
 
 <div align="center">
 
-### Upload Interface
-![Upload Interface](screenshots/upload.png)
+![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
+![Django](https://img.shields.io/badge/Django-5.x-green.svg)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange.svg)
+![React](https://img.shields.io/badge/React-19-blue.svg)
+![Vite](https://img.shields.io/badge/Vite-Frontend-purple.svg)
+![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-### Results & Recommendations
-![Results](screenshots/disease_result.png)
+### AI-Powered Plant Disease Detection using Deep Learning
+
+Detect plant diseases from leaf images and receive intelligent treatment, prevention, and fertilizer recommendations.
 
 </div>
 
-## 🚀 Quick Start
+---
 
-## 📋 Prerequisites
+## 📖 Overview
 
-Before running this project, ensure you have the following installed:
+Plant Disease Detection System is a full-stack AI application that combines **Deep Learning**, **Computer Vision**, and **Web Technologies** to identify plant diseases from leaf images.
 
-- Python 3.10 or higher (3.11 recommended)
-- pip (Python package manager)
-- Git
-- Virtual environment (`venv`) (recommended)
-- 4 GB+ RAM (8 GB recommended for model training)
-- 5 GB+ free disk space (dataset, models, and dependencies)
-- Internet connection (required for downloading the PlantVillage dataset)
+The system uses a **MobileNetV2-based Convolutional Neural Network (CNN)** trained on the PlantVillage dataset and provides:
 
-### Installation
+- Disease Prediction
+- Confidence Score
+- Disease Description
+- Treatment Suggestions
+- Prevention Recommendations
+- Fertilizer Guidance
+- Prediction History
 
-1. **Clone the repository**
-```bash
-git clone https://github.com/dassomnath99/Plant-Disease-Detection.git
-cd Plant-Disease-Detection
+This project is designed for:
+
+- Farmers
+- Agriculture Researchers
+- Students
+- Agricultural Startups
+- Smart Farming Applications
+
+---
+
+# ✨ Features
+
+## 🤖 AI Disease Detection
+
+- Upload a plant leaf image
+- Real-time disease prediction
+- Confidence score visualization
+- Supports 38 disease classes
+
+## 🌱 Disease Information
+
+- Disease description
+- Symptoms
+- Causes
+- Prevention techniques
+- Treatment suggestions
+
+## 💊 Fertilizer Recommendation
+
+- Crop-specific fertilizer guidance
+- Disease-based nutrient recommendations
+
+## 📜 Prediction History
+
+- Stores previous predictions
+- Image history
+- Timestamp tracking
+
+## 📱 Responsive Interface
+
+- Mobile-friendly
+- Tablet-friendly
+- Desktop optimized
+
+## 🔌 REST API
+
+- Django REST Framework API
+- Easy integration with web/mobile apps
+
+---
+
+# 🏗️ System Architecture
+
+```text
+┌─────────────────┐
+│ React Frontend  │
+│     (Vite)      │
+└────────┬────────┘
+         │ Axios API Calls
+         ▼
+┌─────────────────────┐
+│ Django REST API     │
+│ (DRF Backend)       │
+└────────┬────────────┘
+         │
+         ▼
+┌─────────────────────┐
+│ TensorFlow Model    │
+│ MobileNetV2 CNN     │
+└────────┬────────────┘
+         │
+         ▼
+┌─────────────────────┐
+│ SQLite/PostgreSQL   │
+└─────────────────────┘
 ```
 
-2. **Create virtual environment**
+---
+
+# 🌾 Supported Plants & Diseases
+
+| Plant | Classes |
+|---------|----------|
+| Apple | 4 |
+| Blueberry | 1 |
+| Cherry | 2 |
+| Corn | 4 |
+| Grape | 4 |
+| Orange | 1 |
+| Peach | 2 |
+| Pepper | 2 |
+| Potato | 3 |
+| Raspberry | 1 |
+| Soybean | 1 |
+| Squash | 1 |
+| Strawberry | 2 |
+| Tomato | 10 |
+
+### Total Classes
+
+✅ 38 Plant Disease Classes
+
+---
+
+# 📸 Screenshots
+
+## Home Page
+
+```text
+[ Upload Plant Image ]
+```
+
+## Prediction Result
+
+```text
+Disease:
+Tomato Early Blight
+
+Confidence:
+98.74%
+
+Treatment:
+Apply Copper Fungicide
+
+Prevention:
+Crop Rotation
+```
+
+## Prediction History
+
+```text
+Image | Disease | Confidence | Date
+```
+
+## Disease Information
+
+```text
+Disease
+Description
+Symptoms
+Treatment
+Prevention
+```
+
+---
+
+# 📂 Project Structure
+
+```text
+Plant-Disease-Detection/
+│
+├── backend/
+│   │
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+│
+├── frontend/
+│   │
+│   ├── src/
+│   │   ├── api/
+│   │   │   └── api.js
+│   │   │
+│   │   ├── components/
+│   │   │   ├── Navbar.jsx
+│   │   │   ├── ImageUploader.jsx
+│   │   │   ├── PredictionCard.jsx
+│   │   │   ├── HistoryCard.jsx
+│   │   │   └── Loading.jsx
+│   │   │
+│   │   ├── pages/
+│   │   │   ├── Home.jsx
+│   │   │   ├── History.jsx
+│   │   │   └── DiseaseInfo.jsx
+│   │   │
+│   │   ├── App.jsx
+│   │   ├── main.jsx
+│   │   └── index.css
+│   │
+│   ├── package.json
+│   └── vite.config.js
+│
+├── predictions/
+│   ├── migrations/
+│   ├── models.py
+│   ├── serializers.py
+│   ├── views.py
+│   ├── urls.py
+│   └── admin.py
+│
+├── media/
+├── models/
+│   ├── plant_disease_model.keras
+│   ├── plant_disease_model.h5
+│   └── class_names.json
+│
+├── requirements.txt
+├── screenshots/
+├── download_data.py
+├── manage.py
+├── predict.py
+├── train_with_evaluate.py
+└── README.md
+```
+
+---
+
+# ⚙️ Installation
+
+## 1️⃣ Clone Repository
+
 ```bash
-# Using venv
+git clone https://github.com/buildwithsomnath/plant-disease-detection.git
+
+cd plant-disease-detection
+```
+
+---
+
+# Backend Setup
+
+## Create Virtual Environment
+
+### Windows
+
+```bash
 python -m venv venv
 
-# Activate (Windows)
 venv\Scripts\activate
+```
 
-# Activate (macOS/Linux)
+### Linux/Mac
+
+```bash
+python -m venv venv
+
 source venv/bin/activate
 ```
 
-3. **Install dependencies**
+---
+
+## Install Dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. **Download or train the model**
+---
+
+## Run Migrations
 
 ```bash
-pip install kagglehub
-```
-Before downloading the dataset, configure your Kaggle API token.
-
-1. Sign in to your Kaggle account.
-2. Go to **Account Settings**.
-3. Under **API**, copy your API Token (starts with `KGAT_...`).
-
-**Windows (PowerShell):**
-
-```powershell
-$env:KAGGLE_API_TOKEN="KGAT_your_actual_token_here"
-```
-
-To make it permanent:
-
-```powershell
-setx KAGGLE_API_TOKEN "KGAT_your_actual_token_here"
-```
-
-Close and reopen PowerShell after running `setx`.
-
-Now download the PlantVillage dataset:
-
-```bash
-python download_data.py
-```
-
-Train the model:
-
-```bash
-python train_with_evaluate.py
-```
-
-Test the model: (optional)
-
-```bash
-python test.py test_images/[filename].jpg
-```
-This will create:
-
-- `models/plant_disease_model.h5`
-- `models/plant_disease_model.tflite`
-- `models/plant_disease_model.keras`
-- `models/class_names.json`
-- `models/training_history.png`
-- `models/confusion_matrix.png`
-- `models/classification_report.txt`
-
-5. **Setup Django**
-```bash
-# Create necessary directories
-mkdir -p media/uploads
-
-# Run migrations
 python manage.py makemigrations
-python manage.py migrate
 
-# Create superuser (optional)
+python manage.py migrate
+```
+
+---
+
+## Create Superuser
+
+```bash
 python manage.py createsuperuser
 ```
 
-6. **Run the development server**
+---
+
+## Start Backend
+
 ```bash
 python manage.py runserver
 ```
 
-7. **Access the application**
+Backend URL:
 
-Open your browser and navigate to:
-```
-http://127.0.0.1:8000/
-```
-
-## 📁 Project Structure
-```
-plant_disease_detection/
-│
-├── backend/                          # Django project settings
-│   ├── __init__.py
-│   ├── settings.py                   # Configuration
-│   ├── urls.py                       # Main URL routing
-│   └── wsgi.py                       # WSGI config
-│
-├── predictions/                      # Main application
-│   ├── migrations                    # Migration
-│   ├── templates                     # templates(HTML code)
-│   ├── models.py                     # Database models
-│   ├── views.py                      # API endpoints
-│   ├── urls.py                       # App routing
-│   ├── admin.py                      # Admin panel config
-│   └── utils.py                      # Helper functions
-│
-├── models/                           # ML models directory
-│   ├── plant_disease_model.h5        # Trained CNN model
-│   ├── plant_disease_model.keras     # .keras
-│   ├── plant_disease_model.h5        # .h5
-│   ├── plant_disease_model.tflite    # .tflite
-│   └── class_names.json              # Training plots
-│
-│
-├── media/                            # User uploaded images
-│   └── uploads/
-│
-│
-├── requirements.txt                 # Python dependencies
-├── manage.py                        # Django management
-├── train_with_evaluate.py           # Train and Test for Model Generation
-├── test.py                          # Predict and Test
-├── download_data.py                 # Download Dataset or change the path for different dataset
-└── README.md                        # This file
+```text
+http://127.0.0.1:8000
 ```
 
-## 🔌 API Usage
+---
 
-### Predict Disease
+# Frontend Setup
 
-**Endpoint:** `POST /api/predict/`
-
-**Request:**
 ```bash
-curl -X POST http://localhost:8000/api/predict/ \
-  -F "image=@path/to/plant_leaf.jpg"
+cd frontend
+
+npm install
 ```
 
-**Response:**
+---
+
+## Start Frontend
+
+```bash
+npm run dev
+```
+
+Frontend URL:
+
+```text
+http://localhost:5173
+```
+
+---
+
+# 🔌 API Endpoints
+
+## Predict Disease
+
+### POST
+
+```http
+/api/predict/
+```
+
+### Request
+
+```bash
+curl -X POST \
+-F "image=@leaf.jpg" \
+http://localhost:8000/api/predict/
+```
+
+### Response
+
 ```json
 {
   "success": true,
   "prediction": {
-    "disease": "Tomato_Late_blight",
-    "confidence": 94.32,
+    "disease": "Tomato___Early_blight",
+    "confidence": 98.74,
     "plant_type": "Tomato",
-    "description": "Serious fungal disease that can destroy crops quickly",
-    "fertilizer": "Balanced fertilizer with micronutrients",
-    "treatment": "Remove infected parts immediately, apply fungicide",
-    "prevention": "Avoid wet foliage, ensure good drainage"
-  },
-  "prediction_id": 123
+    "description": "...",
+    "treatment": "...",
+    "fertilizer": "...",
+    "prevention": "..."
+  }
 }
 ```
 
-### Get Prediction History
+---
 
-**Endpoint:** `GET /api/history/?limit=10`
+## Prediction History
 
-**Response:**
-```json
-{
-  "success": true,
-  "history": [
-    {
-      "id": 123,
-      "disease": "Tomato_Late_blight",
-      "confidence": 94.32,
-      "plant_type": "Tomato",
-      "timestamp": "2025-10-30 14:23:45",
-      "image_url": "/media/uploads/2025/10/30/image.jpg"
-    }
-  ]
-}
+### GET
+
+```http
+/api/history/
 ```
 
-## 🧪 Model Performance
+---
 
-| Metric | Training | Validation | Test |
-|--------|----------|------------|------|
-| **Accuracy** | 82.32% | 77.15% | 68.78% |
+## Prediction Detail
 
-### Training Details
+### GET
 
-- **Dataset**: PlantVillage (54,000+ images)
-- **Architecture**: Transfer Learning with MobileNetV2
-- **Framework**: TensorFlow 2.15 / Keras
-- **Input Size**: 224x224 RGB
-- **Training Time**: ~1.5 - 2 hour (GPU)
-- **Model Size**: ~13 MB
+```http
+/api/history/<id>/
+```
 
-## 🎓 Model Training
+---
 
-### Training Your Own Model
+## Disease Information
 
-1. **Prepare dataset**
+### GET
+
+```http
+/api/diseases/
+```
+
+---
+
+## Disease Detail
+
+### GET
+
+```http
+/api/diseases/<id>/
+```
+
+---
+
+# 🧠 Deep Learning Model
+
+## Architecture
+
+```text
+Input Image
+    │
+    ▼
+Resize 224x224
+    │
+    ▼
+MobileNetV2
+    │
+    ▼
+Global Average Pooling
+    │
+    ▼
+Dense Layer
+    │
+    ▼
+Dropout
+    │
+    ▼
+38-Class Softmax
+```
+
+---
+
+# 📊 Model Performance
+
+| Metric | Value |
+|----------|---------|
+| Dataset | PlantVillage |
+| Images | 54,000+ |
+| Classes | 38 |
+| Input Size | 224x224 |
+| Framework | TensorFlow |
+| Model | MobileNetV2 |
+| Accuracy | ~81–84% |
+
+---
+
+# 🛠️ Tech Stack
+
+## Frontend
+
+- React
+- Vite
+- Axios
+- React Router DOM
+- CSS
+
+## Backend
+
+- Django
+- Django REST Framework
+- TensorFlow
+- Keras
+- Pillow
+- NumPy
+
+## Database
+
+- SQLite
+- PostgreSQL (Production)
+
+---
+
+# 🚀 Deployment
+
+## Frontend
+
+Deploy on:
+
+- Vercel
+
 ```bash
-# Download PlantVillage dataset
-mkdir -p data
-kaggle datasets download -d emmarex/plantdisease
-unzip plantdisease.zip -d data/
-
-# Or organize your own dataset
-# data/plant_disease_data/
-#   ├── Disease_Class_1/
-#   ├── Disease_Class_2/
-#   └── ...
+npm run build
 ```
 
-2. **Train the model**
+---
+
+## Backend
+
+Deploy on:
+
+- Railway
+
+Install:
+
 ```bash
-# Simple training (recommended)
-python train_with_evaluate.py
-
-# Advanced training with detailed metrics
-python train_model.py
+pip install gunicorn
 ```
 
-3. **View results**
-```bash
-# Check metrics summary
-python view_results.py
+Create Procfile:
 
-# Generated files:
-# - models/plant_disease_model.h5
-# - models/class_names.json
+```text
+web: gunicorn backend.wsgi
 ```
 
-## 🛠️ Technology Stack
+---
 
-### Backend
-- **Django 4.2+** - Web framework
-- **Django REST Framework** - API development
-- **TensorFlow 2.15** - Deep learning framework
-- **Keras** - Neural network API
-- **Pillow** - Image processing
-- **NumPy** - Numerical computing
+# 🔐 Environment Variables
 
-### Frontend
-- **HTML5** - Markup
-- **CSS3** - Styling (responsive design)
-- **JavaScript** - Interactive functionality
-- **Fetch API** - Asynchronous requests
+Create `.env`
 
-### Machine Learning
-- **CNN Architecture** - MobileNetV2 (Transfer Learning)
-- **ImageDataGenerator** - Data augmentation
-- **Adam Optimizer** - Training optimization
-- **Categorical Crossentropy** - Loss function
-
-## 🔧 Configuration
-
-### Environment Variables
-
-Create a `.env` file in the project root:
 ```env
-SECRET_KEY=your-secret-key-here
-DEBUG=True
+SECRET_KEY=your-secret-key
+
+DEBUG=False
+
 ALLOWED_HOSTS=localhost,127.0.0.1
-DATABASE_URL=sqlite:///db.sqlite3
+
+MODEL_PATH=models/plant_disease_model.keras
+
 MAX_UPLOAD_SIZE=5242880
-MODEL_PATH=models/plant_disease_model.h5
 ```
 
-### Django Settings
+---
 
-Key configurations in `settings.py`:
-```python
-# Model settings
-MODEL_PATH = os.path.join(BASE_DIR, 'models', 'plant_disease_model.h5')
-MAX_UPLOAD_SIZE = 5242880  # 5MB
+# 🔮 Future Improvements
 
-# Media files
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+- User Authentication
+- Multi-language Support
+- Weather-based Disease Prediction
+- Mobile Application
+- Cloud Model Serving
+- Explainable AI (Grad-CAM)
+- PDF Report Generation
+- Farmer Chatbot
+- Real-time Camera Detection
 
-# CORS settings (for API access)
-CORS_ALLOW_ALL_ORIGINS = True
-```
+---
 
-## 📱 Mobile Integration
+# 🤝 Contributing
 
-### React Native Example
-```javascript
-const uploadImage = async (imageUri) => {
-  const formData = new FormData();
-  formData.append('image', {
-    uri: imageUri,
-    type: 'image/jpeg',
-    name: 'plant.jpg',
-  });
+Contributions are welcome.
 
-  const response = await fetch('http://your-server.com/api/predict/', {
-    method: 'POST',
-    body: formData,
-  });
+1. Fork repository
+2. Create branch
 
-  const result = await response.json();
-  return result;
-};
-```
-
-## 🚀 Deployment
-
-### Docker Deployment
 ```bash
-# Build image
-docker build -t plant-disease-detection .
-
-# Run container
-docker run -p 8000:8000 plant-disease-detection
+git checkout -b feature/new-feature
 ```
 
-## 🧪 Testing
+3. Commit
 
-### Run Unit Tests
 ```bash
-python manage.py test
+git commit -m "Added feature"
 ```
 
-### Test API Manually
+4. Push
+
 ```bash
-# Test prediction
-curl -X POST http://localhost:8000/api/predict/ \
-  -F "image=@test_images/tomato_leaf.jpg"
-
-# Test history
-curl http://localhost:8000/api/history/
+git push origin feature/new-feature
 ```
 
-### Test Model Accuracy
-```bash
-python test_model.py
-```
+5. Create Pull Request
 
-## 🐛 Troubleshooting
+---
 
-### Common Issues
+# 👨‍💻 Author
 
-**1. Model not loading**
-```bash
-# Check if model file exists
-ls models/plant_disease_model.h5
+### Somnath Das
 
-# Verify TensorFlow version
-python -c "import tensorflow as tf; print(tf.__version__)"
-```
+GitHub:
 
-**2. Import errors**
-```bash
-# Reinstall dependencies
-pip install -r requirements.txt --force-reinstall
-```
+https://github.com/buildwithsomnath
 
-**3. CORS errors**
-```bash
-# Add to settings.py
-CORS_ALLOW_ALL_ORIGINS = True
-```
+LinkedIn:
 
-**4. Memory errors**
-```bash
-# Reduce batch size in training
-BATCH_SIZE = 16  # instead of 32
-```
+https://linkedin.com/in/buildwithsomnath
 
+Email:
 
-## 🤝 Contributing
+somnathdas4462@gmail.com
 
-Contributions are welcome! Please follow these steps:
+---
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+# 🙏 Acknowledgements
 
-### Contribution Guidelines
+- TensorFlow Team
+- Django Community
+- React Team
+- Kaggle Community
 
-- Write clean, documented code
-- Follow PEP 8 style guide
-- Add unit tests for new features
-- Update documentation as needed
+---
 
-## 📝 License
+# ⭐ Support
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+If you found this project helpful:
 
-## 👨‍💻 Author
+⭐ Star the repository
 
-**Somnath Das**
+🍴 Fork the project
 
-- GitHub: [@buildwithsomnath](https://github.com/buildwithsomnath)
-- Email: somnathdas4462@gmail.com
+📢 Share with others
 
-## 🙏 Acknowledgments
-
-- **Kaggle Community Dataset** - For providing the training data
-- **TensorFlow Team** - For the amazing deep learning framework
-- **Django Community** - For the robust web framework
-
-## 📚 References
-
-- [Kaggle Dataset](https://www.kaggle.com/datasets/vipoooool/new-plant-diseases-dataset)
-- [TensorFlow Documentation](https://www.tensorflow.org/)
-- [Django Documentation](https://docs.djangoproject.com/)
-- [MobileNetV2 Paper](https://arxiv.org/abs/1801.04381)
-
-## 📞 Support
-
-If you have any questions or need help, please:
-
-1. Check the [Issues](https://github.com/buildwithsomnath/plant-disease-detection/issues) page
-2. Open a new issue with detailed description
-3. Contact via email
+---
 
 <div align="center">
 
-Made with ❤️ for farmers and agriculture enthusiasts
-
-**[⬆ back to top](#-plant-disease-detection-system)**
+Made with ❤️ by Somnath Das
 
 </div>
