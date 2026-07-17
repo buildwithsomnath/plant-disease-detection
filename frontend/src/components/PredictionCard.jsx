@@ -1,49 +1,104 @@
 export default function PredictionCard({ prediction }) {
-  if (!prediction) return null;
+  const confidence = Number(prediction.confidence).toFixed(2);
 
   return (
-    <div
-      style={{
-        marginTop: 30,
-        padding: 20,
-        border: "1px solid #ddd",
-        borderRadius: 10,
-        background: "#f9fff8",
-      }}
-    >
-      <h2>{prediction.disease}</h2>
+    <div className="card border-0 shadow-lg rounded-4 mt-4 overflow-hidden">
+      <div className="card-header bg-success text-white py-3">
+        <div className="d-flex justify-content-between align-items-center flex-wrap gap-2">
+          <div>
+            <h3 className="mb-1 fw-bold">
+              🌿{" "}
+              {prediction.disease
+                .replaceAll("__", ": ")
+                .replaceAll("_", " ")}
+            </h3>
+            <small>AI Prediction Result</small>
+          </div>
 
-      <p>
-        <strong>Plant:</strong> {prediction.plant_type}
-      </p>
+          <span className="badge bg-light text-success fs-6 px-3 py-2 rounded-pill">
+            {confidence}%
+          </span>
+        </div>
+      </div>
 
-      <p>
-        <strong>Confidence:</strong> {prediction.confidence}%
-      </p>
+      <div className="card-body p-4">
 
-      <p>
-        <strong>Description:</strong>
-        <br />
-        {prediction.description}
-      </p>
+        {/* Plant */}
+        <div className="mb-4">
+          <h5 className="fw-bold mb-2">🌱 Plant</h5>
+          <p className="text-muted mb-0">{prediction.plant_type}</p>
+        </div>
 
-      <p>
-        <strong>Treatment:</strong>
-        <br />
-        {prediction.treatment}
-      </p>
+        {/* Confidence */}
+        <div className="mb-4">
+          <div className="d-flex justify-content-between mb-2">
+            <strong>Prediction Confidence</strong>
+            <strong>{confidence}%</strong>
+          </div>
 
-      <p>
-        <strong>Fertilizer:</strong>
-        <br />
-        {prediction.fertilizer}
-      </p>
+          <div className="progress" style={{ height: "10px" }}>
+            <div
+              className="progress-bar bg-success"
+              role="progressbar"
+              style={{ width: `${confidence}%` }}
+            />
+          </div>
+        </div>
 
-      <p>
-        <strong>Prevention:</strong>
-        <br />
-        {prediction.prevention}
-      </p>
+        <div className="row g-4">
+
+          <div className="col-md-6">
+            <div className="border rounded-4 p-3 h-100">
+              <h5 className="fw-bold text-success">
+                📝 Description
+              </h5>
+              <p className="text-muted mb-0">
+                {prediction.description}
+              </p>
+            </div>
+          </div>
+
+          <div className="col-md-6">
+            <div className="border rounded-4 p-3 h-100">
+              <h5 className="fw-bold text-warning">
+                💊 Treatment
+              </h5>
+              <p className="mb-0">
+                {prediction.treatment}
+              </p>
+            </div>
+          </div>
+
+          <div className="col-md-6">
+            <div className="border rounded-4 p-3 h-100">
+              <h5 className="fw-bold text-primary">
+                🛡 Prevention
+              </h5>
+              <p className="mb-0">
+                {prediction.prevention}
+              </p>
+            </div>
+          </div>
+
+          <div className="col-md-6">
+            <div className="border rounded-4 p-3 h-100">
+              <h5 className="fw-bold text-success">
+                🌾 Fertilizer Recommendation
+              </h5>
+              <p className="mb-0">
+                {prediction.fertilizer}
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div className="card-footer bg-light text-center">
+        <small className="text-muted">
+          ⚡ Prediction generated using the MobileNetV2 AI model.
+        </small>
+      </div>
     </div>
   );
 }

@@ -142,6 +142,7 @@ This project is designed for:
 ```text
 [ Upload Plant Image ]
 ```
+![Home Page Screenshot](./screenshots/HomePage.png)
 
 ## Prediction Result
 
@@ -158,13 +159,13 @@ Apply Copper Fungicide
 Prevention:
 Crop Rotation
 ```
-
+![Prediction Result Screenshot](./screenshots/Prediction.png)
 ## Prediction History
 
 ```text
 Image | Disease | Confidence | Date
 ```
-
+![Prediction History Screenshot](./screenshots/PredictionHistory.png)
 ## Disease Information
 
 ```text
@@ -174,7 +175,7 @@ Symptoms
 Treatment
 Prevention
 ```
-
+![Disease Information Screenshot](./screenshots/DiseaseInfo.png)
 ---
 
 # 📂 Project Structure
