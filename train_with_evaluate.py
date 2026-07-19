@@ -18,10 +18,10 @@ CONFIG = {
     "history_plot_path": PROJECT_ROOT / "models" / "training_history.png",
     "confusion_matrix_path": PROJECT_ROOT / "models" / "confusion_matrix.png", 
     'image_size': 224,
-    'batch_size': 16,
+    'batch_size': 8,
     'epochs': 10,
     'learning_rate': 0.001,
-    'validation_split': 0.3,
+    'validation_split': 0.2,
     'test_split': 0.1,
 }
 
