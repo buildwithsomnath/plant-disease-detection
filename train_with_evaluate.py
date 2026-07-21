@@ -78,7 +78,7 @@ def prepare_dataset(dataset_path, image_size, batch_size, validation_split):
 
 
 # BUILD CNN MODEL
-def build_model(num_classes, input_size=224):
+def build_mobile_net_model(num_classes, input_size=224):
     print("\n 🏗️ Building model architecture...")
     print("   Using Transfer Learning with MobileNetV2...")
     base_model = keras.applications.MobileNetV2(
@@ -107,7 +107,7 @@ def build_model(num_classes, input_size=224):
 
     return model
 
-def build_custom_cnn(num_classes, input_size=224):
+def build_custom_cnn_5_blocks(num_classes, input_size=224):
     print("\n🏗️ Building custom CNN Architecture...")
     model = models.Sequential([
         #Block 1
@@ -398,9 +398,11 @@ def main():
         CONFIG['validation_split']
     )
 
-    # BUILD THE MODEL
-    model = build_model(len(class_names), CONFIG['image_size'])
+    # BUILD MOBILE_NET_V2 MODEL
+    # model = build_mobile_net_model(len(class_names), CONFIG['image_size'])
 
+    #BUILD CUSTOM_CNN MODEL 5 BLOCKS
+    model = build_custom_cnn_5_blocks(len(class_names), CONFIG['image_size'])
     # COMPILE MODEL
     model = compile_model(model, CONFIG['learning_rate'])
 
