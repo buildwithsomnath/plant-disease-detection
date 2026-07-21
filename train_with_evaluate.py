@@ -177,34 +177,37 @@ def compile_model(model, learning_rate=0.001):
 
 # callbacks
 
-def get_callbacks(model_path):
+from pathlib import Path
+
+def get_callbacks(model_save_path):
+
+    model_save_path = Path(model_save_path)
+
+    model_save_path.parent.mkdir(parents=True, exist_ok=True)
+
     callbacks = [
-        #save best model
         keras.callbacks.ModelCheckpoint(
-            model_path,
-            monitor='val_accuracy',
-            save_best_only = True,
-            mode='max',
-            verbose=1
-        ),
-        #early stopping to prevent overfitting
-        keras.callbacks.EarlyStopping(
-            monitor='val_loss',
-            patience=5,
-            restore_best_weights=True,
+            filepath=str(model_save_path),   # <-- Important
+            monitor="val_accuracy",
+            mode="max",
+            save_best_only=True,
             verbose=1
         ),
 
-        #learning rate reduction
+        keras.callbacks.EarlyStopping(
+            monitor="val_loss",
+            patience=5,
+            restore_best_weights=True
+        ),
+
         keras.callbacks.ReduceLROnPlateau(
-            monitor='val_loss',
+            monitor="val_loss",
             factor=0.5,
             patience=3,
-            min_lr=1e-7,
-            verbose=1
-        )
-        
+            min_lr=1e-7
+        ),
     ]
+
     return callbacks
 
 def train_model(model, train_generator, validation_generator, epochs, callbacks):
